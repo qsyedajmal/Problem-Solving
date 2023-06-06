@@ -325,7 +325,6 @@ class GCD{
         System.out.println(g);
     }
 }
-
 class LCM{
 
     public static void lCM(int num1,int num2){
@@ -491,6 +490,20 @@ class MissingNumber{
         System.out.println("the missing number in an array is "+sum);
     }
 }
+//Write a program to check if a number is a perfect square.
+class PerfectSquare{
+    public static void perfectSquare(int num){
+        int newnum=0;
+        for (int i=1; i<num;i++){
+            if (i*i==num) {
+                newnum = i;
+                System.out.println("The given number is a square of " + i);
+            }
+        }
+        if (newnum==0)
+            System.out.println("The given number is not a perfect square");
+    }
+}
 public class Main {
 
     public void ajmal(){
@@ -535,5 +548,6 @@ public class Main {
         //int[] arr={2,3,4,5};
         //LIS.lIS(arr);
         //MissingNumber.missingNumber(arr);
+        PerfectSquare.perfectSquare(26);
     }
 }
