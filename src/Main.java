@@ -479,6 +479,18 @@ class LIS{
 
     }
 }
+//Write a program to find the missing number in an array of consecutive numbers.
+class MissingNumber{
+    public static void missingNumber(int[] arr){
+        int n= arr.length+1;
+        int sum=(n*(n+1))/2;
+
+        for (int i=0;i< arr.length;i++){
+            sum=sum-arr[i];
+        }
+        System.out.println("the missing number in an array is "+sum);
+    }
+}
 public class Main {
 
     public void ajmal(){
@@ -520,7 +532,8 @@ public class Main {
         //WordsInAString.wordsInAString("");
         //ValidEmail.validEmail("@syedajmalq@gmail.com");
         //DecimalToBinary.decimalToBinary(100);
-        //int[] arr={2,3,4,1,2};
+        //int[] arr={2,3,4,5};
         //LIS.lIS(arr);
+        //MissingNumber.missingNumber(arr);
     }
 }
