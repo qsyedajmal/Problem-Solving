@@ -7,6 +7,7 @@ class Sum{
         System.out.println(s);
     }
 }
+
 //Write a program to find the largest number among three numbers.
 class LargestNum{
     static public void largestNum(int i, int j,int k){
@@ -23,7 +24,6 @@ class LargestNum{
                 System.out.println(i);
         }
     }}
-
 
 //Write a program to check if a number is prime.
 class Prime{
@@ -57,14 +57,19 @@ class Palindrome{
     }
 }
 //Write a program to calculate the factorial of a number.
+
 class Factorial{
-    public static int factorial(int num){
-        if (num==0)
-            return 1;
-        else
-            return num*factorial(num-1);
+    public static void factorial (int num){
+
+        int fact=1;
+
+        for (int i=1;i<=num;i++){
+            fact*=i;
+        }
+        System.out.println(fact);
     }
 }
+
 //Write a program to find the Fibonacci series up to a given number.
 class Fibonacci{
     public static void fibonacci(int num){
@@ -151,9 +156,6 @@ class CommonElements{
             System.out.print(ac+" ");
         }
     }
-
-    //Write a program to check if two strings are anagrams.
-
     public static void commonElements(int[] arr1, int[] arr2){
         Set<Integer> addCommon = new HashSet<>();
         for (int i=0;i< arr1.length;i++)
@@ -169,7 +171,280 @@ class CommonElements{
         }
     }
 }
+
+//Write a program to check if two strings are anagrams.
+
+class Anagram {
+    public static void anagram(String str1, String str2){
+
+        if (str1.length()!=str2.length()){
+            System.out.println("This strings are not an anagram");
+        }
+        else {
+            char[] str1c = str1.toLowerCase().toCharArray();
+            char[] str2c = str2.toLowerCase().toCharArray();
+
+            Arrays.sort(str1c);
+            Arrays.sort(str2c);
+
+            if(Arrays.equals(str1c,str2c)){
+                System.out.printf("This strings are an anagram");
+            }
+
+        }
+    }
+}
+//Write a program to find the maximum and minimum elements in an array.
+
+class MinAndMax{
+    public static void minAndMax(int[] arr){
+
+        int min=arr[0];
+        int max=arr[0];
+
+        for (int i=0;i<arr.length;i++){
+            if (min>arr[i])
+                min=arr[i];
+            if (max<arr[i])
+                max=arr[i];
+        }
+        System.out.println("The minimum number is "+min);
+        System.out.println("The maximum number is "+max);
+    }
+}
+//Write a program to remove duplicates from an array.
+
+class RemoveDuplicate{
+    public static  void removeDuplicate ( int[] arr){
+
+        for (int i=0; i< arr.length;i++){
+            for (int j=i+1; j< arr.length;j++){
+                if (arr[i]==arr[j]){
+                    arr[i]=-1;
+                }
+            }
+        }
+        for (int k=0;k<arr.length;k++){
+            if (arr[k]!=-1)
+                System.out.print(arr[k]+" ");
+        }
+    }
+}
+//Write a program to find the second largest element in an array.
+
+class SecondLargest{
+
+    public static void secondLargest(int[] arr){
+
+        int maximum =Integer.MIN_VALUE;
+        int secondmaximum = Integer.MIN_VALUE;
+
+        for (int i=0; i<arr.length; i++){
+
+            if(arr[i]>maximum){
+                secondmaximum=maximum;
+                maximum=arr[i];
+            }
+
+            if (arr[i]<maximum && arr[i]>secondmaximum){
+                secondmaximum=arr[i];
+            }
+        }
+        System.out.println("The second maximum number is "+ secondmaximum);
+    }
+
+}
+
+//Write a program to check if a string is a valid palindrome ignoring non-alphanumeric characters.
+class PalindromeNonAlphanumeric{
+    public static boolean palindromeNonAlphanumeric (String str){
+        str.toLowerCase();
+
+        int start = 0;
+        int end = str.length()-1;
+
+        while(start<=end){
+
+            char s = str.charAt(start);
+            char e = str.charAt(end);
+
+            if (!(s>='a'&& s<='z'))
+                start++;
+            else if (!(e>='a'&& e<='z'))
+                end--;
+             else if (e==s){
+                start++;
+                end--;
+             }
+            else
+                return false;
+        }
+        return true;
+    }
+}
+
+class PerfectNumber{
+    public static void perfectNumber(int number){
+//        int num=number;
+        int count=0;
+        if (number==1)
+            System.out.println("The given number is a perfect number");
+        else {
+            for (int i=1;i<number;i++){
+                if (number%i==0)
+                    count=count+i;
+            }
+            if (number==count)
+                System.out.println("The given number is a perfect number");
+            else
+                System.out.println("it is not a perfect number");
+        }
+
+    }
+}
+
+class Power{
+    public static int power(int base, int exponent){
+
+        if (exponent==0)
+            return 1;
+
+        return base*power(base,exponent-1);
+    }
+}
+//Write a program to find the GCD (Greatest Common Divisor) of two numbers.
+class GCD{
+
+    public static void gCD(int num1, int num2){
+        int g=0;
+
+        for (int i=1;i<num1;i++){
+            if (num1%i==0&&num2%i==0)
+                g=i;
+        }
+        System.out.println(g);
+    }
+}
+
+class LCM{
+
+    public static void lCM(int num1,int num2){
+        int num=0;
+        for (int i=1;i<=num2;i++)
+        {
+            if (num1%i==0&&num2%i==0) {
+                 num =i;
+            }
+        }
+        int lcm = num1*num2/num;
+        System.out.println(lcm);
+    }
+}
+//Write a program to check if a number is an Armstrong number.
+class ArmstrongNumber{
+    public static void armstrongNumber(int num){
+
+        int num1=num;
+        int sum =0;
+        int rem;
+
+        while(num>0){
+            rem=num%10;
+            sum+=(rem*rem*rem);
+            num=num/10;
+        }
+        if (num1==sum)
+            System.out.println("The given number is a armstrong number");
+        else
+            System.out.println("The given number is not a armstrong number");
+    }
+}
+//Write a program to reverse an integer number.
+class ReverseAnInteger{
+    public static void reverseAnInteger(int num){
+        int rem;
+        int rev =0;
+        while (num>0){
+            rem=num%10;
+            rev=(rev*10)+rem;
+            num=num/10;
+        }
+        System.out.println("The reverse of the given integer is "+rev);
+
+    }
+}
+//Write a program to check if a string is a valid email address.
+class ValidEmail{
+    public static void validEmail(String email){
+
+        String regrex ="^([a-zA-Z0-9.-]+)@([a-zA-Z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$";
+
+        if (email.matches(regrex))
+            System.out.println("The given string is a valid e-mail");
+        else
+            System.out.println("The given string is not a valid e-mail");
+
+    }
+}
+// Write a program to find the factorial of a number using recursion.
+class FactorialUsingRecurssion{
+    public static int factorial(int num){
+        if (num==0)
+            return 1;
+        else
+            return num*factorial(num-1);
+    }
+}
+
+//Write a program to find the sum of all elements in an array.
+class SumOfArrays{
+    public static void sumOfArrays(int[] arr){
+
+        int sum=0;
+        for (int i=0;i< arr.length;i++){
+            sum+=arr[i];
+        }
+        System.out.println(sum);
+    }
+}
+//Write a program to find the average of all elements in an array.
+class AverageOfArrays{
+    public static void averageOfArrays(int[] arr){
+        int sum=0;
+        int avg= arr.length;;
+        for (int i=0;i< arr.length;i++){
+            sum+=arr[i];
+        }
+        double ans=sum/avg;
+        System.out.println(ans);
+    }
+}
+//Write a program to find the number of words in a string.
+class WordsInAString{
+    public static void wordsInAString(String str){
+
+        try {
+
+            int count=0;
+            if (str.charAt(0)!=' ')
+                count++;
+            for (int i=0; i<str.length(); i++){
+                if (str.charAt(i)==' '&&str.charAt(i+1)!=' ') {
+                    count++;
+                }
+            }
+            System.out.println("The total number of words in an String is "+count);
+        }
+        catch (IndexOutOfBoundsException e){
+            System.out.println("Plesae enter a string");
+        }
+    }
+}
 public class Main {
+
+    public void ajmal(){
+
+    }
     public static void main(String[] args) {
         //Sum.sum(5,10);
         //LargestNum.largestNum(50,100,1000);
@@ -178,7 +453,7 @@ public class Main {
         //System.out.println(Factorial.factorial(5));
         //Fibonacci.fibonacci(10);//0 1 1 2 3 5 8 13 21 34
         //ResverseString.reverseString("Ajmal");
-        //int array[]= {5,4,3,2,1};
+        //int array[]= {1,1,2,2,3,3,4,4,5,5};
         //int[] array2={2,5};
         //ArrayAscendindOrder.arrayAscendingOrder(array);
         //String[] arr1 = { "Article", "in", "Geeks", "for", "Geeks" };
@@ -186,8 +461,24 @@ public class Main {
         //CommonElements.commonElements(array,array2);
         //String name ="Q Syed Ajmal";
         //OccurrenceOfCharacter.occurrenceOfCharacter(name);
-
-
-
+        //Anagram.anagram("ajmal","jamal");
+        //MinAndMax.minAndMax(array);
+        //RemoveDuplicate.removeDuplicate(array);
+        //SecondLargest.secondLargest(array);
+        //if (PalindromeNonAlphanumeric.palindromeNonAlphanumeric("malayalam"))
+        //    System.out.println("The given string is a palindrome");
+        //else
+        //    System.out.println("The given string is not a palindrome");
+        //PerfectNumber.perfectNumber(28);
+        //System.out.println(Power.power(3,4));
+        //GCD.gCD(96,132);
+        //LCM.lCM(1000,2000);
+        //ArmstrongNumber.armstrongNumber(153);
+        //ReverseAnInteger.reverseAnInteger(123);
+        //Factorial.factorial(5);
+        //SumOfArrays.sumOfArrays(array);
+        //AverageOfArrays.averageOfArrays(array);
+        //WordsInAString.wordsInAString("");
+        //ValidEmail.validEmail("@syedajmalq@gmail.com");
     }
 }
