@@ -456,6 +456,29 @@ class WordsInAString{
         }
     }
 }
+//Write a program to find the length of the longest increasing subsequence in an array.
+class LIS{
+    public static void lIS(int[] arr){
+
+        if (arr.length==0)
+            System.out.println("The length of the longest increasing array is 0");
+
+        int length=1;
+        int maxLength=1;
+
+        for (int i=0;i< arr.length-1;i++){
+            if (arr[i+1]>arr[i]) {
+                length++;
+            }
+            else {
+                length = 1;
+            }
+            maxLength=Math.max(length,maxLength);
+        }
+        System.out.println("The length of the longest increasing array is "+maxLength);
+
+    }
+}
 public class Main {
 
     public void ajmal(){
@@ -496,6 +519,8 @@ public class Main {
         //AverageOfArrays.averageOfArrays(array);
         //WordsInAString.wordsInAString("");
         //ValidEmail.validEmail("@syedajmalq@gmail.com");
-        DecimalToBinary.decimalToBinary(100);
+        //DecimalToBinary.decimalToBinary(100);
+        //int[] arr={2,3,4,1,2};
+        //LIS.lIS(arr);
     }
 }
