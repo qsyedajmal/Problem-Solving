@@ -419,6 +419,22 @@ class AverageOfArrays{
         System.out.println(ans);
     }
 }
+//Write a program to convert a decimal number to binary.
+class DecimalToBinary{
+    public static void decimalToBinary(int num){
+
+        int[] decimalvalue=new int[100];
+        int i=0;
+        while (num!=0){
+            decimalvalue[i] = num%2;
+            num=num/2;
+            i++;
+        }
+        for (int j=i-1;j>=0;j--){
+            System.out.print(decimalvalue[j]+" ");
+        }
+    }
+}
 //Write a program to find the number of words in a string.
 class WordsInAString{
     public static void wordsInAString(String str){
@@ -480,5 +496,6 @@ public class Main {
         //AverageOfArrays.averageOfArrays(array);
         //WordsInAString.wordsInAString("");
         //ValidEmail.validEmail("@syedajmalq@gmail.com");
+        DecimalToBinary.decimalToBinary(100);
     }
 }
