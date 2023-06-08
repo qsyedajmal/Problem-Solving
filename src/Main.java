@@ -504,6 +504,7 @@ class PerfectSquare{
             System.out.println("The given number is not a perfect square");
     }
 }
+//Write a program to find the largest prime factor of a number.
 public class Main {
 
     public void ajmal(){
@@ -548,6 +549,6 @@ public class Main {
         //int[] arr={2,3,4,5};
         //LIS.lIS(arr);
         //MissingNumber.missingNumber(arr);
-        PerfectSquare.perfectSquare(26);
+        //PerfectSquare.perfectSquare(26);
     }
 }
