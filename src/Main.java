@@ -571,6 +571,22 @@ class PalindromeRecursion{
         return palindromeRecursion(str,start+1,end-1);
     }
 }
+//Write a program to reverse the words in a sentence.
+
+class ReverseTheWords{
+
+
+    public static void reverseTheWord(String str){
+        String rev="";
+        String[] s= str.split(" ");
+
+        for (int i=s.length-1;i>=0;i--){
+            rev = rev + s[i] + " ";
+        }
+        System.out.println(rev);
+    }
+}
+
 public class Main {
 
     public void ajmal(){
@@ -620,5 +636,6 @@ public class Main {
         //SumOfEven.sumOfEven(arr);
         //SumOfOdd.sumOfOdd(arr);
         //PalindromeRecursion.palindromeRecursion("malayalam");
+        ReverseTheWords.reverseTheWord("My Name is Ajmal");
     }
 }
