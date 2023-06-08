@@ -586,7 +586,21 @@ class ReverseTheWords{
         System.out.println(rev);
     }
 }
+//Write a program to find the sum of all digits in a number.
+class SumOfDigits{
+    public static void sumOsDigits(int num){
 
+        int rem=0;
+        int sum=0;
+
+        while (num!=0){
+            rem=num%10;
+            sum+=rem;
+            num=num/10;
+        }
+        System.out.println("The sum of all digits in a number is "+sum);
+    }
+}
 public class Main {
 
     public void ajmal(){
@@ -636,6 +650,7 @@ public class Main {
         //SumOfEven.sumOfEven(arr);
         //SumOfOdd.sumOfOdd(arr);
         //PalindromeRecursion.palindromeRecursion("malayalam");
-        ReverseTheWords.reverseTheWord("My Name is Ajmal");
+        //ReverseTheWords.reverseTheWord("My Name is Ajmal");
+        SumOfDigits.sumOsDigits(123);
     }
 }
