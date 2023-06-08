@@ -195,7 +195,6 @@ class Anagram {
     }
 }
 //Write a program to find the maximum and minimum elements in an array.
-
 class MinAndMax{
     public static void minAndMax(int[] arr){
 
@@ -505,6 +504,25 @@ class PerfectSquare{
     }
 }
 //Write a program to find the largest prime factor of a number.
+class PrimeFactor{
+    public static void primeFactor(int number){
+        Set<Integer> primenum= new HashSet<>();
+
+        for (int i=2;i<=number;i++){
+            while (number%i==0){
+                primenum.add(i);
+                number=number/i;
+            }
+        }
+
+        int larprime =0;
+        for (Integer p: primenum){
+            larprime=Math.max(p,larprime);
+        }
+
+        System.out.println("The largest prime factor of a number is "+larprime);
+    }
+}
 public class Main {
 
     public void ajmal(){
@@ -550,5 +568,6 @@ public class Main {
         //LIS.lIS(arr);
         //MissingNumber.missingNumber(arr);
         //PerfectSquare.perfectSquare(26);
+        //PrimeFactor.primeFactor(315);
     }
 }
