@@ -546,6 +546,31 @@ class SumOfOdd{
         System.out.println("The sum of all odd number in an array is "+sum);
     }
 }
+//Write a program to check if a string is a valid palindrome using recursion.
+class PalindromeRecursion{
+
+    public static void palindromeRecursion(String str){
+        int start=0;
+        int end = str.length()-1;
+//        palindromeRecursion(str,start,end);
+
+        if (palindromeRecursion(str,start,end)==1)
+            System.out.println("The given string is a palindrome");
+        if (palindromeRecursion(str,start,end)!=1)
+            System.out.println("The given string is not a palindrome");
+    }
+
+    private static int palindromeRecursion(String str, int start, int end) {
+
+        if (start>=end)
+            return 1;
+
+        if (str.charAt(start)!=str.charAt(end))
+            return 0;
+
+        return palindromeRecursion(str,start+1,end-1);
+    }
+}
 public class Main {
 
     public void ajmal(){
@@ -587,12 +612,13 @@ public class Main {
         //WordsInAString.wordsInAString("");
         //ValidEmail.validEmail("@syedajmalq@gmail.com");
         //DecimalToBinary.decimalToBinary(100);
-        int[] arr={2,3,4,5,2,2};
+        //int[] arr={2,3,4,5,2,2};
         //LIS.lIS(arr);
         //MissingNumber.missingNumber(arr);
         //PerfectSquare.perfectSquare(26);
         //PrimeFactor.primeFactor(315);
         //SumOfEven.sumOfEven(arr);
-        SumOfOdd.sumOfOdd(arr);
+        //SumOfOdd.sumOfOdd(arr);
+        //PalindromeRecursion.palindromeRecursion("malayalam");
     }
 }
