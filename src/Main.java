@@ -625,6 +625,40 @@ class VowelsAndConsonants{
         System.out.println("The number of consonants in a string are "+consonants);
     }
 }
+//Write a program to find the number of occurrences of a word in a string.
+class OccurenceOfWords{
+    public static void occurenceOfWords(String str){
+        str=str.toLowerCase();
+
+        Map<String,Integer> oow = new TreeMap<>();
+
+        String[] s = str.split(" ");
+        int count =0;
+
+        for (int i=0; i<s.length;i++){
+            count=0;
+            for (int j=0;j<s.length;j++){
+                if (s[i].equals(s[j]))
+                    count++;
+            }
+            oow.put(s[i],count);
+        }
+
+        for (Map.Entry<String,Integer> o : oow.entrySet()){
+            System.out.println(o.getKey() + " Appeared " + o.getValue() + " Times");
+        }
+    }
+
+    public static void occurenceOfWords(String str, String word){
+        String[] s = str.split(" ");
+        int count =0;
+        for (int j=0;j<s.length;j++){
+            if (s[j].equals(word))
+                count++;
+        }
+        System.out.println("The occurence of the word " + word + " is "+ count +" times");
+    }
+}
 public class Main {
 
     public void ajmal(){
@@ -676,6 +710,7 @@ public class Main {
         //PalindromeRecursion.palindromeRecursion("malayalam");
         //ReverseTheWords.reverseTheWord("My Name is Ajmal");
         //SumOfDigits.sumOsDigits(123);
-        VowelsAndConsonants.vowelsAndConsonants("Sumaiya     ");
+        //VowelsAndConsonants.vowelsAndConsonants("Sumaiya");
+        OccurenceOfWords.occurenceOfWords("Hi ajmal my name is also ajmal","ajmal");
     }
 }
