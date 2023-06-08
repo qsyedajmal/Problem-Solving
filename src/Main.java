@@ -535,6 +535,17 @@ class SumOfEven{
         System.out.println("The sum of all even number in an array is "+sum);
     }
 }
+class SumOfOdd{
+    public static void sumOfOdd(int[] arr){
+        int sum =0;
+
+        for (int i=0;i< arr.length; i++){
+            if (arr[i]%2!=0)
+                sum+=arr[i];
+        }
+        System.out.println("The sum of all odd number in an array is "+sum);
+    }
+}
 public class Main {
 
     public void ajmal(){
@@ -581,6 +592,7 @@ public class Main {
         //MissingNumber.missingNumber(arr);
         //PerfectSquare.perfectSquare(26);
         //PrimeFactor.primeFactor(315);
-        SumOfEven.sumOfEven(arr);
+        //SumOfEven.sumOfEven(arr);
+        SumOfOdd.sumOfOdd(arr);
     }
 }
