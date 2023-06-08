@@ -601,6 +601,30 @@ class SumOfDigits{
         System.out.println("The sum of all digits in a number is "+sum);
     }
 }
+
+class VowelsAndConsonants{
+    public static void vowelsAndConsonants(String str){
+
+        int vowels =0;
+        int consonants = 0;
+
+       str=str.toLowerCase();
+
+        for (int i=0;i<str.length();i++){
+
+            if (str.charAt(i)=='a' || str.charAt(i)=='e' || str.charAt(i)=='i' || str.charAt(i)=='o'  || str.charAt(i)=='u' )
+                vowels++;
+
+            else if (str.charAt(i)==' ')
+                continue;
+
+            else
+                consonants++;
+        }
+        System.out.println("The number of vowels in a string are "+vowels);
+        System.out.println("The number of consonants in a string are "+consonants);
+    }
+}
 public class Main {
 
     public void ajmal(){
@@ -651,6 +675,7 @@ public class Main {
         //SumOfOdd.sumOfOdd(arr);
         //PalindromeRecursion.palindromeRecursion("malayalam");
         //ReverseTheWords.reverseTheWord("My Name is Ajmal");
-        SumOfDigits.sumOsDigits(123);
+        //SumOfDigits.sumOsDigits(123);
+        VowelsAndConsonants.vowelsAndConsonants("Sumaiya     ");
     }
 }
