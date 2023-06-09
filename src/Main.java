@@ -776,6 +776,22 @@ class MaximumProduct{
     }
 
 }
+//HackerRank Java Loops II problem solution
+class Answer {
+    public static void answer(int a, int b ,int n){
+        int total=a;
+        int v=2;
+        for( int i =0;i<n;i++){
+
+            total+=b*Math.pow(v,i);
+            System.out.print(total+" ");
+
+
+        }
+        System.out.println(" ");
+
+    }
+}
 public class Main {
 
     public void ajmal(){
@@ -835,5 +851,16 @@ public class Main {
         //FirstNonRepeated.firstNonRepeated("aabbccddee");
         //int[] arr = {9,4,7,8,0};
         //MaximumProduct.maximumProduct(arr);
+        Scanner in = new Scanner(System.in);
+        int j = in.nextInt();
+
+        for( int i =0;i<j;i++){
+            int a = in.nextInt();
+            int b = in.nextInt();
+            int n = in.nextInt();
+            Answer.answer(a,b,n);
+        }
+
+
     }
 }
