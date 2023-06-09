@@ -672,6 +672,33 @@ class OccurenceOfWords{
         System.out.println("The occurence of the word " + word + " is "+ count +" times");
     }
 }
+//Write a program to find the largest and smallest prime numbers in a given range.
+class LargestSmallestPrime {
+    public static void largestSmallestPrime( int min, int max){
+
+        int large = Integer.MIN_VALUE;
+        int small = Integer.MAX_VALUE;
+
+        boolean prime = true;
+
+        for (int i =min; i<=max;i++){
+
+            for (int j=2;j<i;j++){
+                if (i%j==0){
+                    prime=false;
+                }
+            }
+            if (prime){
+                large=Math.max(i,large);
+                small=Math.min(i,small);
+            }
+            prime=true;
+        }
+        System.out.println("The smallest prime number in a given range is "+small);
+        System.out.println("The largest prime number in a given range is "+large);
+    }
+}
+
 public class Main {
 
     public void ajmal(){
@@ -726,5 +753,6 @@ public class Main {
         //VowelsAndConsonants.vowelsAndConsonants("Sumaiya");
         //OccurenceOfWords.occurenceOfWords("Hi ajmal my name is also ajmal","ajmal");
         //IPv4.ipv4("127.0.0.1");
+        LargestSmallestPrime.largestSmallestPrime(1,100);
     }
 }
