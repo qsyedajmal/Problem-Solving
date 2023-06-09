@@ -601,7 +601,7 @@ class SumOfDigits{
         System.out.println("The sum of all digits in a number is "+sum);
     }
 }
-
+//37 Write a program to find the number of vowels and consonants in a string.
 class VowelsAndConsonants{
     public static void vowelsAndConsonants(String str){
 
@@ -623,6 +623,19 @@ class VowelsAndConsonants{
         }
         System.out.println("The number of vowels in a string are "+vowels);
         System.out.println("The number of consonants in a string are "+consonants);
+    }
+}
+//Write a program to check if a string is a valid IPv4 address.
+class IPv4{
+    public static void ipv4(String ipaddress){
+
+        String regrex = "((2[0-5]{2}|[01]?\\d{1,2})\\.){3}(2[0-5]{2}|[01]?\\d{1,2})";
+
+        if (ipaddress.matches(regrex))
+            System.out.println("It is a valid ip address");
+        else
+            System.out.println("It is not a valid ip address");
+
     }
 }
 //Write a program to find the number of occurrences of a word in a string.
@@ -711,6 +724,7 @@ public class Main {
         //ReverseTheWords.reverseTheWord("My Name is Ajmal");
         //SumOfDigits.sumOsDigits(123);
         //VowelsAndConsonants.vowelsAndConsonants("Sumaiya");
-        OccurenceOfWords.occurenceOfWords("Hi ajmal my name is also ajmal","ajmal");
+        //OccurenceOfWords.occurenceOfWords("Hi ajmal my name is also ajmal","ajmal");
+        //IPv4.ipv4("127.0.0.1");
     }
 }
