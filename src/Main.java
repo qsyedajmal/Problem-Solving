@@ -753,6 +753,29 @@ class FirstNonRepeated {
 
     }
 }
+//43 Write a program to find the maximum product of two integers in an array.
+class MaximumProduct{
+    public static void maximumProduct(int[] arr){
+
+        int maxproduct =Integer.MIN_VALUE;
+        int product = 0;
+
+        for (int i =0; i< arr.length;i++)
+        {
+            for (int j =0;j<arr.length;j++)
+            {
+                if (i!=j)
+                {
+                    product=arr[i]*arr[j];
+                    maxproduct=Math.max(maxproduct,product);
+                }
+            }
+        }
+
+        System.out.println("The maximum product of two integers in an array is "+maxproduct);
+    }
+
+}
 public class Main {
 
     public void ajmal(){
@@ -810,5 +833,7 @@ public class Main {
         //LargestSmallestPrime.largestSmallestPrime(1,100);
         //PrimeWithinRange.primeWithinRange(1,100);
         //FirstNonRepeated.firstNonRepeated("aabbccddee");
+        //int[] arr = {9,4,7,8,0};
+        //MaximumProduct.maximumProduct(arr);
     }
 }
