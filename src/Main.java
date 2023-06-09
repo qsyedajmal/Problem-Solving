@@ -698,7 +698,29 @@ class LargestSmallestPrime {
         System.out.println("The largest prime number in a given range is "+large);
     }
 }
+class PrimeWithinRange{
+      public static void primeWithinRange(int min , int max){
+          Set<Integer> numbers = new TreeSet<>();
+          boolean prime = true;
 
+          for (int i =min; i<=max;i++){
+
+              for (int j=2;j<i;j++){
+                  if (i%j==0){
+                      prime=false;
+                  }
+              }
+              if (prime){
+                  numbers.add(i);
+              }
+              prime=true;
+          }
+          System.out.println("The number of prime number within a range are ");
+          for (Integer n : numbers){
+              System.out.print(n + " ");
+          }
+      }
+}
 public class Main {
 
     public void ajmal(){
@@ -753,6 +775,7 @@ public class Main {
         //VowelsAndConsonants.vowelsAndConsonants("Sumaiya");
         //OccurenceOfWords.occurenceOfWords("Hi ajmal my name is also ajmal","ajmal");
         //IPv4.ipv4("127.0.0.1");
-        LargestSmallestPrime.largestSmallestPrime(1,100);
+        //LargestSmallestPrime.largestSmallestPrime(1,100);
+        PrimeWithinRange.primeWithinRange(1,100);
     }
 }
