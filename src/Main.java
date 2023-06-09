@@ -698,6 +698,7 @@ class LargestSmallestPrime {
         System.out.println("The largest prime number in a given range is "+large);
     }
 }
+//41 Write a program to find the number of prime numbers within a given range.
 class PrimeWithinRange{
       public static void primeWithinRange(int min , int max){
           Set<Integer> numbers = new TreeSet<>();
