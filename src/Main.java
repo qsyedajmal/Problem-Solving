@@ -722,6 +722,37 @@ class PrimeWithinRange{
           }
       }
 }
+//42 Write a program to find the first non-repeated character in a string.
+class FirstNonRepeated {
+    public static void firstNonRepeated(String str){
+        str=str.toLowerCase();
+        int count = 0;
+        Map<Character,Integer> ch = new HashMap<>();
+
+        for (int i = 0 ; i< str.length() ; i++){
+            count=0;
+            for (int j = 0 ; j< str.length() ; j++){
+                if (str.charAt(i)==str.charAt(j)){
+                    count++;
+                }
+            }
+            ch.put(str.charAt(i),count);
+        }
+        int check=0;
+        for (int k = 0 ; k<str.length();k++){
+            if (ch.get(str.charAt(k))==1)
+            {
+                System.out.println("The first non repeated character in a string is "+str.charAt(k));
+                check++;
+                break;
+            }
+        }
+        if (check==0){
+            System.out.println("The character in the string are all repeated");
+        }
+
+    }
+}
 public class Main {
 
     public void ajmal(){
@@ -777,6 +808,7 @@ public class Main {
         //OccurenceOfWords.occurenceOfWords("Hi ajmal my name is also ajmal","ajmal");
         //IPv4.ipv4("127.0.0.1");
         //LargestSmallestPrime.largestSmallestPrime(1,100);
-        PrimeWithinRange.primeWithinRange(1,100);
+        //PrimeWithinRange.primeWithinRange(1,100);
+        //FirstNonRepeated.firstNonRepeated("aabbccddee");
     }
 }
