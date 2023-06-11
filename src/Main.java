@@ -834,6 +834,23 @@ class RotateAnArrayRight{
 //46 Write a program to find the maximum sum of a subarray in an array.
 
 class MaximumSumOfSubarray{
+//    public static void maximumSumOfSubarray(int[] arr)
+//    {
+//        int maxsum=arr[0];
+//        int sum=arr[0];
+//
+//        for (int i=1;i< arr.length;i++)
+//        {
+//           if (sum<0)
+//               sum=arr[i];
+//           else {
+//               sum+=arr[i];
+//           }
+//           maxsum=Math.max(sum,maxsum);
+//        }
+//        System.out.println("The maximum sum of a sub array in a string is " + maxsum);
+//    }
+
     public static void maximumSumOfSubarray(int[] arr)
     {
         int maxsum=arr[0];
@@ -841,14 +858,52 @@ class MaximumSumOfSubarray{
 
         for (int i=1;i< arr.length;i++)
         {
-           if (sum<0)
-               sum=arr[i];
-           else {
-               sum+=arr[i];
-           }
-           maxsum=Math.max(sum,maxsum);
+            if (sum>arr[i])
+                sum=arr[i];
+            else {
+                sum+=arr[i];
+            }
+            maxsum=Math.max(sum,maxsum);
         }
         System.out.println("The maximum sum of a sub array in a string is " + maxsum);
+    }
+}
+//Subarray with given sum
+class SubarrayWithSum{
+    public static int[] subarrayWithSum(int[] arr, int k){
+        int sum=arr[0];
+
+        if (sum==k)
+        {
+            return new int[]{0};
+        }
+        else
+        {
+            for (int i = 0; i<arr.length ; i++)
+            {
+                sum=arr[i];
+
+                for (int j= i+1; j<arr.length;j++)
+                {
+                    if (sum==k)
+                    {
+                        return new int[]{i,j-1};
+                    }
+
+                    if (sum>k)
+                    {
+                        break;
+                    }
+
+                    if (sum<k)
+                    {
+                        sum+=arr[j];
+                    }
+                }
+            }
+        }
+
+        return new int[]{-1};
     }
 }
 public class Main {
@@ -919,8 +974,14 @@ public class Main {
         //Answer.answer(a,b,n);
         //}
         //TrailingZeros.trailingZeros(0);
-        int[] arr={1,2,-2,3};
+        int[] arr={10,2,4,7,5};
         //RotateAnArrayRight.rotateAnArrayRight(4,arr);
-        MaximumSumOfSubarray.maximumSumOfSubarray(arr);
+        //MaximumSumOfSubarray.maximumSumOfSubarray(arr);
+        int[] a=SubarrayWithSum.subarrayWithSum(arr,100);
+        for (int b: a)
+        {
+            System.out.print(b + " ");
+        }
+
     }
 }
