@@ -810,6 +810,27 @@ class TrailingZeros{
 
     }
 }
+//45 Write a program to rotate an array to the right by a given number of steps.
+
+class RotateAnArrayRight{
+    public static void rotateAnArrayRight(int times, int[] array){
+        int temp=0;
+        for (int i=0;i<times;i++)
+        {
+            temp=array[array.length-1];
+            for (int j=array.length-1;j>0 ;j--)
+            {
+                array[j]=array[j-1];
+            }
+            array[0]=temp;
+        }
+
+        for (int a : array)
+        {
+            System.out.print(a+" ");
+        }
+    }
+}
 public class Main {
 
     public void ajmal(){
@@ -877,7 +898,8 @@ public class Main {
         //int n = in.nextInt();
         //Answer.answer(a,b,n);
         //}
-        TrailingZeros.trailingZeros(0);
-
+        //TrailingZeros.trailingZeros(0);
+        int[] arr={1,2,3,4,5};
+        RotateAnArrayRight.rotateAnArrayRight(4,arr);
     }
 }
