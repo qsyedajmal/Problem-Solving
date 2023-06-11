@@ -792,6 +792,24 @@ class Answer {
 
     }
 }
+//44 Write a program to find the number of trailing zeros in the factorial of a number.
+class TrailingZeros{
+    public static void trailingZeros(int num){
+        if (num<5)
+            System.out.println("The number of zeros in a factorial number is 0");
+
+
+        else {
+            int sum=0;
+            while (num>=5){
+                sum=sum+num/5;
+                num=num/5;
+            }
+            System.out.println("The number of zeros in a factorial number is "+sum);
+        }
+
+    }
+}
 public class Main {
 
     public void ajmal(){
@@ -851,16 +869,15 @@ public class Main {
         //FirstNonRepeated.firstNonRepeated("aabbccddee");
         //int[] arr = {9,4,7,8,0};
         //MaximumProduct.maximumProduct(arr);
-        Scanner in = new Scanner(System.in);
-        int j = in.nextInt();
-
-        for( int i =0;i<j;i++){
-            int a = in.nextInt();
-            int b = in.nextInt();
-            int n = in.nextInt();
-            Answer.answer(a,b,n);
-        }
-
+        //Scanner in = new Scanner(System.in);
+        //int j = in.nextInt();
+        //for( int i =0;i<j;i++){
+        //int a = in.nextInt();
+        //int b = in.nextInt();
+        //int n = in.nextInt();
+        //Answer.answer(a,b,n);
+        //}
+        TrailingZeros.trailingZeros(0);
 
     }
 }
