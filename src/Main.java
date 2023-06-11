@@ -831,6 +831,26 @@ class RotateAnArrayRight{
         }
     }
 }
+//46 Write a program to find the maximum sum of a subarray in an array.
+
+class MaximumSumOfSubarray{
+    public static void maximumSumOfSubarray(int[] arr)
+    {
+        int maxsum=arr[0];
+        int sum=arr[0];
+
+        for (int i=1;i< arr.length;i++)
+        {
+           if (sum<0)
+               sum=arr[i];
+           else {
+               sum+=arr[i];
+           }
+           maxsum=Math.max(sum,maxsum);
+        }
+        System.out.println("The maximum sum of a sub array in a string is " + maxsum);
+    }
+}
 public class Main {
 
     public void ajmal(){
@@ -899,7 +919,8 @@ public class Main {
         //Answer.answer(a,b,n);
         //}
         //TrailingZeros.trailingZeros(0);
-        int[] arr={1,2,3,4,5};
-        RotateAnArrayRight.rotateAnArrayRight(4,arr);
+        int[] arr={1,2,-2,3};
+        //RotateAnArrayRight.rotateAnArrayRight(4,arr);
+        MaximumSumOfSubarray.maximumSumOfSubarray(arr);
     }
 }
