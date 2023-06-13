@@ -974,14 +974,14 @@ public class Main {
         //Answer.answer(a,b,n);
         //}
         //TrailingZeros.trailingZeros(0);
-        int[] arr={10,2,4,7,5};
+        //int[] arr={10,2,4,7,5};
         //RotateAnArrayRight.rotateAnArrayRight(4,arr);
         //MaximumSumOfSubarray.maximumSumOfSubarray(arr);
-        int[] a=SubarrayWithSum.subarrayWithSum(arr,100);
-        for (int b: a)
-        {
-            System.out.print(b + " ");
-        }
+        //int[] a=SubarrayWithSum.subarrayWithSum(arr,100);
+        //for (int b: a)
+        //{
+        //   System.out.print(b + " ");
+        //}
 
     }
 }
