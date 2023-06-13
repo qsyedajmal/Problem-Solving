@@ -834,24 +834,24 @@ class RotateAnArrayRight{
 //46 Write a program to find the maximum sum of a subarray in an array.
 
 class MaximumSumOfSubarray{
-//    public static void maximumSumOfSubarray(int[] arr)
-//    {
-//        int maxsum=arr[0];
-//        int sum=arr[0];
-//
-//        for (int i=1;i< arr.length;i++)
-//        {
-//           if (sum<0)
-//               sum=arr[i];
-//           else {
-//               sum+=arr[i];
-//           }
-//           maxsum=Math.max(sum,maxsum);
-//        }
-//        System.out.println("The maximum sum of a sub array in a string is " + maxsum);
-//    }
-
     public static void maximumSumOfSubarray(int[] arr)
+    {
+        int maxsum=arr[0];
+        int sum=arr[0];
+
+        for (int i=1;i< arr.length;i++)
+        {
+           if (sum<0)
+               sum=arr[i];
+           else {
+               sum+=arr[i];
+           }
+           maxsum=Math.max(sum,maxsum);
+        }
+        System.out.println("The maximum sum of a sub array in a string is " + maxsum);
+    }
+
+    public static void maximumSumOfSubarray1(int[] arr)
     {
         int maxsum=arr[0];
         int sum=arr[0];
@@ -906,7 +906,7 @@ class SubarrayWithSum{
         return new int[]{-1};
     }
 }
-//kkkdkkkkk
+
 public class Main {
 
     public void ajmal(){
