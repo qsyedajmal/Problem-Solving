@@ -976,6 +976,36 @@ class OCharacterString
         }
     }
 }
+//50 Write a program to check if a number is a strong number.
+class StrongNumber
+{
+    public static void strongNumber(int num)
+    {
+        int temp=num;
+        int rem=0;
+        int sum =0;
+
+        while(num>0)
+        {
+            rem=num%10;
+            sum = sum + factorial(rem);
+            num=num/10;
+        }
+
+        if (temp==sum)
+            System.out.println("The given number is a strong number");
+        else
+            System.out.println("The given number is not a strong number");
+    }
+
+    private static int factorial(int num)
+    {
+        if (num==0)
+            return 1;
+        else
+            return num*factorial(num-1);
+    }
+}
 public class Main {
 
     public void ajmal(){
@@ -1054,7 +1084,8 @@ public class Main {
         //}
         //String[] arr = { "aaa","aab","bbb"};
         //LongestCommonPrefix.longestCommonPrefic(arr);
-        OCharacterString.oCharacterString("Ajmal");
+        //OCharacterString.oCharacterString("Ajmal");
+        StrongNumber.strongNumber(146);
 
     }
 }
