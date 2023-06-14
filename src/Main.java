@@ -907,6 +907,45 @@ class SubarrayWithSum{
     }
 }
 //47 Write a program to check if a string is a valid IPv6 address.
+//48 Write a program to find the length of the longest common prefix in an array of strings.
+class LongestCommonPrefix
+{
+    public static void longestCommonPrefic(String[] arr)
+    {
+        if (arr==null || arr.length==0)
+            System.out.println("The array is empty");
+
+        if (lcp(arr).equals("-1"))
+        {
+            System.out.println("There is no common prefic in an array of strings");
+        }
+        else
+        {
+            System.out.println(lcp(arr));
+        }
+    }
+
+    private static String lcp(String[] arr)
+    {
+        String lcp=arr[0];
+
+        for ( int i=1; i< arr.length;i++)
+        {
+            String currentWord = arr[i];
+            int j=0;
+
+            while (j<lcp.length() && j<currentWord.length() && lcp.charAt(j)==currentWord.charAt(j) )
+            {
+                j++;
+            }
+            if (j==0)
+                return "-1";
+
+            lcp=currentWord.substring(0,j);
+        }
+        return lcp;
+    }
+}
 public class Main {
 
     public void ajmal(){
@@ -983,6 +1022,8 @@ public class Main {
         //{
         //   System.out.print(b + " ");
         //}
+        String[] arr = { "aaa","aab","bbb"};
+        LongestCommonPrefix.longestCommonPrefic(arr);
 
     }
 }
