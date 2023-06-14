@@ -1007,6 +1007,37 @@ class StrongNumber
     }
 }
 //51 Write a program to find the sum of all prime numbers within a given range.
+
+class SumOfPrimeNumbers
+{
+    public static void sumOfPrimeNumbers(int start, int end)
+    {
+        int sum=0;
+        boolean prime = true;
+
+        for (int i=start ; i<=end ; i++ )
+        {
+            prime = true;
+            if (i==1 || i==0)
+                prime=false;
+
+            for (int j=2 ; j<i ;j++)
+            {
+                if (i%j==0)
+                {
+                    prime=false;
+                    break  ;
+                };
+            }
+            if (prime)
+                sum=sum+i;
+        }
+        if (sum==0)
+            System.out.println("There is no prime number between the range");
+        else
+            System.out.println("The sum of prime number between the range is "+sum);
+    }
+}
 public class Main {
 
     public void ajmal(){
@@ -1087,6 +1118,6 @@ public class Main {
         //LongestCommonPrefix.longestCommonPrefic(arr);
         //OCharacterString.oCharacterString("Ajmal");
         //StrongNumber.strongNumber(146);
-
+        SumOfPrimeNumbers.sumOfPrimeNumbers(4,13);
     }
 }
