@@ -1085,7 +1085,7 @@ public class Main {
         //String[] arr = { "aaa","aab","bbb"};
         //LongestCommonPrefix.longestCommonPrefic(arr);
         //OCharacterString.oCharacterString("Ajmal");
-        StrongNumber.strongNumber(146);
+        //StrongNumber.strongNumber(146);
 
     }
 }
