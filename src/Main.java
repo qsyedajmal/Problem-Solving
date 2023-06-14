@@ -946,6 +946,36 @@ class LongestCommonPrefix
         return lcp;
     }
 }
+//49 Write a program to find the number of occurrences of each character in a string.
+
+class OCharacterString
+{
+    public static void oCharacterString (String str)
+    {
+        Map<Character,Integer> ocs = new TreeMap<>();
+        int count =0;
+
+        str=str.toLowerCase();
+
+        for ( int i=0;i<str.length();i++)
+        {
+            for (int j=0;j<str.length();j++)
+            {
+                if (str.charAt(i)==str.charAt(j))
+                {
+                    count++;
+                }
+            }
+            ocs.put(str.charAt(i),count);
+            count=0;
+        }
+
+        for (Map.Entry<Character,Integer> o : ocs.entrySet())
+        {
+            System.out.println("The character "+o.getKey() +" occured "+o.getValue()+" times");
+        }
+    }
+}
 public class Main {
 
     public void ajmal(){
@@ -1022,8 +1052,9 @@ public class Main {
         //{
         //   System.out.print(b + " ");
         //}
-        String[] arr = { "aaa","aab","bbb"};
-        LongestCommonPrefix.longestCommonPrefic(arr);
+        //String[] arr = { "aaa","aab","bbb"};
+        //LongestCommonPrefix.longestCommonPrefic(arr);
+        OCharacterString.oCharacterString("Ajmal");
 
     }
 }
