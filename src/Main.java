@@ -1006,6 +1006,7 @@ class StrongNumber
             return num*factorial(num-1);
     }
 }
+//51 Write a program to find the sum of all prime numbers within a given range.
 public class Main {
 
     public void ajmal(){
