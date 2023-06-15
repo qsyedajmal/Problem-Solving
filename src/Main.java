@@ -1127,6 +1127,29 @@ class PrimeUsingSieve
         }
     }
 }
+//55 Write a program to find the maximum difference between two elements in an array, where the smaller element appears before the larger element.
+class MaximumDifferense
+{
+    public static void maximumDifferns(int[] arr)
+    {
+        int difference=0;
+        int maxDifference=0;
+
+        for (int i=0;i< arr.length;i++)
+        {
+          for (int j=i+1;j<arr.length;j++)
+          {
+              if (arr[i]>arr[j])
+              {
+                  break;
+              }
+              difference=arr[j]-arr[i];
+              maxDifference=Math.max(maxDifference,difference);
+          }
+        }
+        System.out.println("The maximum differnce is "+maxDifference);
+    }
+}
 public class Main {
     public static void main(String[] args) {
         //Sum.sum(5,10);
@@ -1206,6 +1229,8 @@ public class Main {
         //SumOfPrimeNumbers.sumOfPrimeNumbers(4,13);
         //PerfectCube.perfectCube(29791);
         //System.out.println( Staircase.staircase(5));;
-        PrimeUsingSieve.primeUsingSieve(10);
+        //PrimeUsingSieve.primeUsingSieve(10);
+        int[] arr= {7,9,5,6,13,2};
+        MaximumDifferense.maximumDifferns(arr);
     }
 }
