@@ -1103,6 +1103,30 @@ class Staircase
         System.out.println(zeroth);
     }
 }
+//54 Write a program to find the number of prime numbers within a given range using the Sieve of Eratosthenes algorithm.
+class PrimeUsingSieve
+{
+    public static void primeUsingSieve(int num)
+    {
+        boolean[] compositenum = new boolean[num];
+
+        for (int i=2; i<=(int)Math.sqrt(num); i++)
+        {
+            if (!compositenum[i])
+            {
+                for (int j=i;i*j<num;j++)
+                {
+                    compositenum[i*j]=true;
+                }
+            }
+        }
+        for (int k=2;k<num;k++)
+        {
+            if (!compositenum[k])
+                System.out.print(k+" ");
+        }
+    }
+}
 public class Main {
     public static void main(String[] args) {
         //Sum.sum(5,10);
@@ -1181,6 +1205,7 @@ public class Main {
         //StrongNumber.strongNumber(146);
         //SumOfPrimeNumbers.sumOfPrimeNumbers(4,13);
         //PerfectCube.perfectCube(29791);
-        Staircase.staircase(5);
+        //System.out.println( Staircase.staircase(5));;
+        PrimeUsingSieve.primeUsingSieve(10);
     }
 }
