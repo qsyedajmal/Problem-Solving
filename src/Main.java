@@ -1038,6 +1038,30 @@ class SumOfPrimeNumbers
             System.out.println("The sum of prime number between the range is "+sum);
     }
 }
+//52 Write a program to check if a number is a perfect cube.
+class PerfectCube
+{
+    public static void perfectCube(int num)
+    {
+        boolean cube=false;
+        for ( int i=0; i<num/2;i++)
+        {
+            if (i*i*i==num)
+            {
+                cube=true;
+            }
+        }
+
+        if (cube)
+        {
+            System.out.println("The given number is a perfect cube");
+        }
+        else
+        {
+            System.out.println("The given number is not a perfect cube");
+        }
+    }
+}
 public class Main {
 
     public void ajmal(){
@@ -1083,7 +1107,7 @@ public class Main {
         //LIS.lIS(arr);
         //MissingNumber.missingNumber(arr);
         //PerfectSquare.perfectSquare(26);
-        //PrimeFactor.primeFactor(315);
+        //PrimeFactor.primeFactor(36);
         //SumOfEven.sumOfEven(arr);
         //SumOfOdd.sumOfOdd(arr);
         //PalindromeRecursion.palindromeRecursion("malayalam");
@@ -1118,6 +1142,7 @@ public class Main {
         //LongestCommonPrefix.longestCommonPrefic(arr);
         //OCharacterString.oCharacterString("Ajmal");
         //StrongNumber.strongNumber(146);
-        SumOfPrimeNumbers.sumOfPrimeNumbers(4,13);
+        //SumOfPrimeNumbers.sumOfPrimeNumbers(4,13);
+        PerfectCube.perfectCube(29791);
     }
 }
