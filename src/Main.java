@@ -1078,11 +1078,32 @@ class PerfectCube
 
     }
 }
+//53 Write a program to find the number of ways to climb a staircase with n steps, where you can either climb 1 or 2 steps at a time.
+class Staircase
+{
+  public static int staircase (int num)
+  {
+      if (num==0 || num==1)
+          return 1;
+      return staircase(num-1)+staircase(num-2);
+  }
+
+//    public static void staircase(int num)
+//    {
+//        int zeroth=1;
+//        int first =1;
+//        int sum;
+//
+//        for (int i =1; i<num+1;i++)
+//        {
+//            sum=zeroth+first;//1+1=2   1+2=3    2+3=5   3+5=8    5+8=13
+//            zeroth=first;//    1       2        3       5        8
+//            first=sum;//       2       3        5       8        13
+//        }
+//        System.out.println(zeroth);
+//    }
+}
 public class Main {
-
-    public void ajmal(){
-
-    }
     public static void main(String[] args) {
         //Sum.sum(5,10);
         //LargestNum.largestNum(50,100,1000);
@@ -1159,6 +1180,7 @@ public class Main {
         //OCharacterString.oCharacterString("Ajmal");
         //StrongNumber.strongNumber(146);
         //SumOfPrimeNumbers.sumOfPrimeNumbers(4,13);
-        PerfectCube.perfectCube(29791);
+        //PerfectCube.perfectCube(29791);
+        Staircase.staircase(5);
     }
 }
