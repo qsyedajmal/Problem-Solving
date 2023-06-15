@@ -1088,20 +1088,20 @@ class Staircase
       return staircase(num-1)+staircase(num-2);
   }
 
-//    public static void staircase(int num)
-//    {
-//        int zeroth=1;
-//        int first =1;
-//        int sum;
-//
-//        for (int i =1; i<num+1;i++)
-//        {
-//            sum=zeroth+first;//1+1=2   1+2=3    2+3=5   3+5=8    5+8=13
-//            zeroth=first;//    1       2        3       5        8
-//            first=sum;//       2       3        5       8        13
-//        }
-//        System.out.println(zeroth);
-//    }
+    public static void staircase2(int num)
+    {
+        int zeroth=1;
+        int first =1;
+        int sum;
+
+        for (int i =1; i<num+1;i++)
+        {
+            sum=zeroth+first;//1+1=2   1+2=3    2+3=5   3+5=8    5+8=13
+            zeroth=first;//    1       2        3       5        8
+            first=sum;//       2       3        5       8        13
+        }
+        System.out.println(zeroth);
+    }
 }
 public class Main {
     public static void main(String[] args) {
