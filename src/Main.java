@@ -1150,6 +1150,7 @@ class MaximumDifferense
     }
 }
 //56 Write a program to find the maximum sum of two non-overlapping subarrays in an array.
+//57 Write a program to find the number of palindromic substrings in a string.
 
 public class Main {
     public static void main(String[] args) {
