@@ -1139,18 +1139,46 @@ class MaximumDifferense
         {
           for (int j=i+1;j<arr.length;j++)
           {
-              if (arr[i]>arr[j])
+              if (arr[i]< arr[j])
               {
-                  break;
-              }
-              difference=arr[j]-arr[i];
-              maxDifference=Math.max(maxDifference,difference);
+                  difference=arr[j]-arr[i];
+                  maxDifference=Math.max(maxDifference,difference);              }
+
           }
         }
         System.out.println("The maximum differnce is "+maxDifference);
     }
 }
 //56 Write a program to find the maximum sum of two non-overlapping subarrays in an array.
+//57 Write a program to find the number of palindromic substrings in a string.
+class PalindromicSubstring
+{
+    public static void palindromicSubstring(String str)
+    {
+        int count=0;
+        String pal = "";
+        String out="";
+        String in="";
+
+        for (int i=0;i<str.length();i++)
+        {
+            out=""+str.charAt(i);
+            for (int j=out.length()-1;j<str.length();j++)
+            {
+                in+=str.charAt(j);
+                for (int k=in.length()-1;k>=0;k--)
+                {
+                    pal = pal + in.charAt(k);
+                }
+                if (in.equals(pal)){
+                    count++;
+                }
+            }
+            out="";
+        }
+        System.out.println(count);
+    }
+}
 public class Main {
     public static void main(String[] args) {
         //Sum.sum(5,10);
@@ -1231,7 +1259,8 @@ public class Main {
         //PerfectCube.perfectCube(29791);
         //System.out.println( Staircase.staircase(5));;
         //PrimeUsingSieve.primeUsingSieve(10);
-        int[] arr= {7,9,5,6,13,2};
-        MaximumDifferense.maximumDifferns(arr);
+        //int[] arr= {7,9,5,6,13,2};
+        //MaximumDifferense.maximumDifferns(arr);
+        PalindromicSubstring.palindromicSubstring("bcacbf");
     }
 }
