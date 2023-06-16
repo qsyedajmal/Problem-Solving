@@ -1,3 +1,4 @@
+import java.io.PrintStream;
 import java.util.*;
 
 //Write a program to find the sum of two numbers.
@@ -1151,6 +1152,23 @@ class MaximumDifferense
 }
 //56 Write a program to find the maximum sum of two non-overlapping subarrays in an array.
 //57 Write a program to find the number of palindromic substrings in a string.
+//Pattern
+class Pattern
+{
+    public static void pattern(int num)
+    {
+        int col;
+        for ( int i=0;i<2*num-1;i++)
+        {
+            col =i>=num?2*num-2-i:i;
+            for (int j=0;j<=col;j++)
+            {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
 
 public class Main {
     public static void main(String[] args) {
@@ -1234,6 +1252,8 @@ public class Main {
         //PrimeUsingSieve.primeUsingSieve(10);
         //int[] arr= {7,9,5,6,13,2};
         //MaximumDifferense.maximumDifferns(arr);
+        Pattern.pattern(5);
+
 
     }
 }
