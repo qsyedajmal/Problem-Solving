@@ -1150,6 +1150,7 @@ class MaximumDifferense
         System.out.println("The maximum differnce is "+maxDifference);
     }
 }
+//56 Write a program to find the maximum sum of two non-overlapping subarrays in an array.
 public class Main {
     public static void main(String[] args) {
         //Sum.sum(5,10);
