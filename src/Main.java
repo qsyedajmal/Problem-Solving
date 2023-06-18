@@ -1211,6 +1211,22 @@ class Pattern3
         }
     }
 }
+//pattern4
+class Pattern4
+{
+    public static void pattern3(int num)
+
+    {
+        for (int row =num; row>=1;row--)
+        {
+            for (int col =num; col>=row;col--)
+            {
+                System.out.print(col);
+            }
+            System.out.println();
+        }
+    }
+}
 public class Main {
     public static void main(String[] args) {
         //Sum.sum(5,10);
