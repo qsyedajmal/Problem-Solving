@@ -1195,6 +1195,22 @@ class Pattern2
         }
     }
 }
+//pattern3
+class Pattern3
+{
+    public static void pattern3(int num)
+
+    {
+        for (int row =num; row>=1;row--)
+        {
+            for (int col =num; col>=row;col--)
+            {
+                System.out.print(col);
+            }
+            System.out.println();
+        }
+    }
+}
 public class Main {
     public static void main(String[] args) {
         //Sum.sum(5,10);
@@ -1277,7 +1293,7 @@ public class Main {
         //PrimeUsingSieve.primeUsingSieve(10);
         //int[] arr= {7,9,5,6,13,2};
         //MaximumDifferense.maximumDifferns(arr);
-        Pattern2.pattern2(5);
+        Pattern3.pattern3(4);
 
 
     }
