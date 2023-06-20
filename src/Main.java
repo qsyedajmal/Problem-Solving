@@ -1196,6 +1196,20 @@ class Pattern2
     }
 }
 
+class ajmal
+{
+    private ajmal(){};
+
+    public static sumaiya a =" ";
+
+}
+
+class sumaiya
+{
+    public void add(){
+        System.out.println("hi");
+    }
+}
 
 public class Main {
     public static void main(String[] args) {
@@ -1281,6 +1295,6 @@ public class Main {
         //MaximumDifferense.maximumDifferns(arr);
         //Pattern3.pattern3(4);
 
-
+       ajmal.a.add();
     }
 }
