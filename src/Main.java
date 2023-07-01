@@ -1169,32 +1169,6 @@ class Pattern
         }
     }
 }
-// Pattern2
-class Pattern2
-{
-    public static void pattern2(int num)
-    {
-        for (int row =1; row<2*num;row++)
-        {
-            int colinrow = row>num?2*num-row:row;
-            int spaces = num-colinrow;
-
-            for (int i=1;i<=spaces;i++)
-            {
-                System.out.print("  ");
-            }
-            for ( int col=colinrow; col>=1;col--)
-            {
-                System.out.print(col+" ");
-            }
-            for ( int col2=2; col2<=colinrow;col2++)
-            {
-                System.out.print(col2+" ");
-            }
-            System.out.println();
-        }
-    }
-}
 
 
 public class Main {
