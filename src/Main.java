@@ -1042,27 +1042,6 @@ class SumOfPrimeNumbers
 //52 Write a program to check if a number is a perfect cube.
 class PerfectCube
 {
-//    public static void perfectCube(int num)
-//    {
-//        boolean cube=false;
-//        for ( int i=0; i<num/2;i++)
-//        {
-//            if (i*i*i==num)
-//            {
-//                cube=true;
-//            }
-//        }
-//
-//        if (cube)
-//        {
-//            System.out.println("The given number is a perfect cube");
-//        }
-//        else
-//        {
-//            System.out.println("The given number is not a perfect cube");
-//        }
-//    }
-
     public static void perfectCube(int num)
     {
         double cbrt=Math.cbrt(num);
